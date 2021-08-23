@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phần mềm quản lý bán hàng Mono</title>
+    <link rel="stylesheet" href="../assets/products.css" type="text/css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div class="manager manager-title">Hóa đơn khách hàng</div>
+            <a href="../material-dashboard-master/examples/dashboard.html" class="manager manager-setting">HỆ THỐNG QUẢN LÝ</a>
+        </div>
+        <div id="judul-side">
+            <div id="top" class="top">  
+                <input type="date" class="tanggal form-control">
+                <select class="pesanan form-control">
+                    <option value="0">Trực tiếp</option>
+                    <option value="1">Online</option>
+                </select>
+                <input class="form-control" type="text"
+                    placeholder="Quét mã vạch sản phẩm">
+                <input class="form-control" type="text"
+                placeholder="ID khách hàng">
+            </div>
+            
+        </div>
+        <div id="sidebar">
+            <div id="judul-header" class="judul-header">
+                <span class="jSatu">Sản phẩm</span>
+                <span class="jDua">Giá</span>
+                <span class="jTiga">Số lượng</span>
+                <span class="jEmpat">Tổng</span>
+                <span class="jLima"><a href="#" onclick="resetItem()"><i class="delete-all fas fa-trash"></i></a></span>
+            </div>
+            <div id="wadah"></div>
+            <div id="wadah-pemayaran">
+                <div id="A">
+                    <div class="total-qty"></div>
+                    <div class="text-total">Tổng</div>
+                    <div class="tampil total-harga"></div>
+                </div>
+                <div id="B">
+                    <button class="disc">Giảm giá</button>
+                    <div class="t-diskon">0</div>
+
+                    <div class="t-change">0</div>
+                </div>
+                <div id="D">
+                    <div class="total-akhir"></div>
+                </div>
+                <div id="buttons">
+                    <button class="button save">Lưu</button>
+                    <button class="button sales-order">Đơn đặt hàng</button>
+                    <button class="button print-order">Thêm thông tin khách hàng</button>
+                    <button class="button print-bill">In hóa đơn</button>
+                    <button class="button payment">Thanh toán</button>
+                </div>
+            </div>
+        </div>
+        <div id="sub-header">
+            <select id="katego" class="form-control" onchange="kategori()">
+                <option value="all">Tất cả sản phẩm</option>
+                <option value="intel">Laptop, PC</option>
+                <option value="amd">Phụ kiện</option>
+                <option value="ram">Sửa chữa</option>
+            </select>
+            <form id="search-box">
+                <input value="" type="text" id="search" class="search" placeholder="Tìm kiếm sản phẩm..."
+                    onkeyup="myFunction()">
+            </form>
+            <div id="total-harga" class="total-harga">
+                Thông tin sản phẩm :
+            </div>
+        </div>
+        <div id="wrapper">
+            <div id="kotak" class="kotak"></div>
+        </div>
+    </div>
+    </div>
+    <script src="../assets/js/products.js"></script>
+</body>
+
+</html>
