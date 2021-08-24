@@ -38,7 +38,7 @@ The above copyright notice and this permission notice shall be included in all c
 
         Tip 2: you can also add an image using data-image tag
     -->
-      <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
+      <div class="logo"><a href="http://127.0.0.1:5500/products.html" class="simple-text logo-normal">
         Quản lý bán hàng
         </a></div>
       <div class="sidebar-wrapper">
@@ -98,9 +98,11 @@ The above copyright notice and this permission notice shall be included in all c
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
-          <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:;">Typography</a>
-          </div>
+          <a class="navbar-brand" href="javascript:;">
+            Quản lý sổ quỹ
+            <i class="fa fa-chevron-right mx-1" style="font-size:8px"></i>
+            Thống kê quỹ
+          </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -110,7 +112,7 @@ The above copyright notice and this permission notice shall be included in all c
           <div class="collapse navbar-collapse justify-content-end">
             <form class="navbar-form">
               <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
+                <input type="text" value="" class="form-control" placeholder="Tìm kiếm...">
                 <button type="submit" class="btn btn-white btn-round btn-just-icon">
                   <i class="material-icons">search</i>
                   <div class="ripple-container"></div>
@@ -297,7 +299,18 @@ The above copyright notice and this permission notice shall be included in all c
                 </div>
               </div>
             </div> -->
-        <div class="container-fluid">     
+        <div class="container-fluid">  
+          <div class="row">
+            <select class="custom-select ml-3" id="inputGroupSelect01" style="width:200px">
+              <option selected>Thống kê theo</option>
+              <option value="1" active>Ngày</option>
+              <option value="2">Tháng</option>
+              <option value="3">Quý</option>
+              <option value="4">Năm</option>
+            </select>
+            <label for="birthday" class="mt-3 ml-3">Xem thống kê theo ngày:</label>
+            <input type="date" id="birthday" name="birthday" class="form-control m-1">
+          </div>   
           <div class="row">
               <div class="col-md-3">
                 <div class="card card-chart">
@@ -333,11 +346,11 @@ The above copyright notice and this permission notice shall be included in all c
                 </div>
               </div>
           </div> 
-          <div class="row ml-1">
-            <button type="submit" class="btn btn-success pull-right ml-2">Lập phiếu thu</button>
+          <div class="row">
+            <button type="submit" class="btn btn-success pull-right ml-3">Lập phiếu thu</button>
             <button type="submit" class="btn btn-danger pull-right ml-2">Lập phiếu chi</button>
             <button type="submit" class="btn btn-warning pull-right ml-2">Xuất file</button>
-            <button type="submit" class="btn btn-primary pull-right ml-2">More</button>
+            <button type="submit" class="btn btn-primary pull-right ml-2">Báo cáo</button>
           </div>
           <div class="row">
             <div class="col-lg-12 col-md-12">
@@ -360,11 +373,11 @@ The above copyright notice and this permission notice shall be included in all c
                         </div>
                       </th>
                       <th>Mã phiếu</th>
+                      <th>Chi tiết phiếu</th>
                       <th>Thời gian</th>
                       <th>Chi nhánh</th>
                       <th>Loại thu chi</th>
                       <th>Người nộp nhận</th>
-                      <th>Giá trị</th>
                       
                       <th></th>
                       
@@ -381,13 +394,44 @@ The above copyright notice and this permission notice shall be included in all c
                             </label>
                           </div>
                         </td>
-                        <td>Dakota Rice</td>
+                        <td>D2421</td>
                         <td>
-                          <i class="fa fa-folder"></i>
+                          <a href="">Xem chi tiết</a>
                         </td>
-                        <td>MJ242</td>
-                        <td>24</td>
-                        <td>6,100,000</td>
+                        <td>
+                          12:30
+                        </td>
+                        <td>CS1</td>
+                        <td>Nhập hàng</td>
+                        <td>5,463,243 </td>
+                        
+                        <td class="td-actions text-right">
+                          <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task">
+                            <i class="material-icons">edit</i>
+                          </button>
+                          <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove">
+                            <i class="material-icons">close</i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" value="">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>M3432</td>
+                        <td>
+                          <a href="">Xem chi tiết</a>
+                        </td>
+                        <td>15:34</td>
+                        <td>CS1</td>
+                        <td>Nhập hàng</td>
                         <td>8,535,000</td>
                         
                         <td class="td-actions text-right">
@@ -410,13 +454,13 @@ The above copyright notice and this permission notice shall be included in all c
                             </label>
                           </div>
                         </td>
-                        <td>Minerva Hooper</td>
+                        <td>S435</td>
                         <td>
-                          <i class="fa fa-folder"></i>
+                          <a href="">Xem chi tiết</a>
                         </td>
-                        <td>MJ242</td>
-                        <td>24</td>
-                        <td>6,100,000</td>
+                        <td>15:34</td>
+                        <td>CS1</td>
+                        <td>Nhập hàng</td>
                         <td>8,535,000</td>
                         
                         <td class="td-actions text-right">
@@ -439,13 +483,13 @@ The above copyright notice and this permission notice shall be included in all c
                             </label>
                           </div>
                         </td>
-                        <td>Sage Rodriguez</td>
+                        <td>P964</td>
                         <td>
-                          <i class="fa fa-folder"></i>
+                          <a href="">Xem chi tiết</a>
                         </td>
-                        <td>MJ242</td>
-                        <td>24</td>
-                        <td>6,100,000</td>
+                        <td>15:34</td>
+                        <td>CS1</td>
+                        <td>Nhập hàng</td>
                         <td>8,535,000</td>
                         
                         <td class="td-actions text-right">
@@ -468,13 +512,13 @@ The above copyright notice and this permission notice shall be included in all c
                             </label>
                           </div>
                         </td>
-                        <td>Philip Chaney</td>
+                        <td>D547</td>
                         <td>
-                          <i class="fa fa-folder"></i>
+                          <a href="">Xem chi tiết</a>
                         </td>
-                        <td>MJ242</td>
-                        <td>24</td>
-                        <td>6,100,000</td>
+                        <td>15:34</td>
+                        <td>CS1</td>
+                        <td>Nhập hàng</td>
                         <td>8,535,000</td>
                         
                         <td class="td-actions text-right">
@@ -497,13 +541,13 @@ The above copyright notice and this permission notice shall be included in all c
                             </label>
                           </div>
                         </td>
-                        <td>Dakota Rice</td>
+                        <td>M8684</td>
                         <td>
-                          <i class="fa fa-folder"></i>
+                          <a href="">Xem chi tiết</a>
                         </td>
-                        <td>MJ242</td>
-                        <td>24</td>
-                        <td>6,100,000</td>
+                        <td>15:34</td>
+                        <td>CS1</td>
+                        <td>Nhập hàng</td>
                         <td>8,535,000</td>
                         
                         <td class="td-actions text-right">
@@ -526,13 +570,13 @@ The above copyright notice and this permission notice shall be included in all c
                             </label>
                           </div>
                         </td>
-                        <td>Minerva Hooper</td>
+                        <td>S586z</td>
                         <td>
-                          <i class="fa fa-folder"></i>
+                          <a href="">Xem chi tiết</a>
                         </td>
-                        <td>MJ242</td>
-                        <td>24</td>
-                        <td>6,100,000</td>
+                        <td>15:34</td>
+                        <td>CS1</td>
+                        <td>Nhập hàng</td>
                         <td>8,535,000</td>
                         
                         <td class="td-actions text-right">
@@ -555,42 +599,13 @@ The above copyright notice and this permission notice shall be included in all c
                             </label>
                           </div>
                         </td>
-                        <td>Sage Rodriguez</td>
+                        <td>P345</td>
                         <td>
-                          <i class="fa fa-folder"></i>
+                          <a href="">Xem chi tiết</a>
                         </td>
-                        <td>MJ242</td>
-                        <td>24</td>
-                        <td>6,100,000</td>
-                        <td>8,535,000</td>
-                        
-                        <td class="td-actions text-right">
-                          <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task">
-                            <i class="material-icons">edit</i>
-                          </button>
-                          <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove">
-                            <i class="material-icons">close</i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" value="">
-                              <span class="form-check-sign">
-                                <span class="check"></span>
-                              </span>
-                            </label>
-                          </div>
-                        </td>
-                        <td>Philip Chaney</td>
-                        <td>
-                          <i class="fa fa-folder"></i>
-                        </td>
-                        <td>MJ242</td>
-                        <td>24</td>
-                        <td>6,100,000</td>
+                        <td>15:34</td>
+                        <td>CS1</td>
+                        <td>Nhập hàng</td>
                         <td>8,535,000</td>
                         
                         <td class="td-actions text-right">
@@ -610,41 +625,6 @@ The above copyright notice and this permission notice shall be included in all c
           </div>
         </div>
       </div>
-      <footer class="footer">
-        <div class="container-fluid">
-          <nav class="float-left">
-            <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="https://creative-tim.com/presentation">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="https://www.creative-tim.com/license">
-                  Licenses
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="copyright float-right">
-            &copy;
-            <script>
-              document.write(new Date().getFullYear())
-            </script>, made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
-          </div>
-        </div>
-      </footer>
     </div>
   </div>
   <div class="fixed-plugin">

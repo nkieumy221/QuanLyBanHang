@@ -38,7 +38,7 @@ The above copyright notice and this permission notice shall be included in all c
 
         Tip 2: you can also add an image using data-image tag
     -->
-      <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
+      <div class="logo"><a href="http://127.0.0.1:5500/products.html" class="simple-text logo-normal">
         Quản lý bán hàng
         </a></div>
       <div class="sidebar-wrapper">
@@ -99,7 +99,11 @@ The above copyright notice and this permission notice shall be included in all c
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:;">Map</a>
+            <a class="navbar-brand" href="javascript:;">
+              Quản lý nhân viên
+              <i class="fa fa-chevron-right mx-1" style="font-size:8px"></i>
+              Danh sách nhân viên
+            </a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -110,7 +114,7 @@ The above copyright notice and this permission notice shall be included in all c
           <div class="collapse navbar-collapse justify-content-end">
             <form class="navbar-form">
               <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
+                <input type="text" value="" class="form-control" placeholder="Tìm kiếm nhân viên...">
                 <button type="submit" class="btn btn-white btn-round btn-just-icon">
                   <i class="material-icons">search</i>
                   <div class="ripple-container"></div>
@@ -181,6 +185,16 @@ The above copyright notice and this permission notice shall be included in all c
                 <div class="card-body table-responsive">
                   <table class="table table-hover">
                     <thead class="text-warning">
+                      <th>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </th>
                       <th>ID</th>
                       <th>Họ tên</th>
                       <th>Vị trí</th>
@@ -189,11 +203,21 @@ The above copyright notice and this permission notice shall be included in all c
                       <th>Ngày bắt đầu</th>
                       <th>Thâm niên</th>
                       <th>Ngày nghỉ</th>
-                      <th>Trạng thái</th>
+                      <th>Chi tiết</th>
                       <th></th>
                     </thead>
                     <tbody>
                       <tr>
+                        <th>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" value="">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                          </div>
+                        </th>
                         <td>1</td>
                         <td>Dakota Rice</td>
                         <td>Bán hàng</td>
@@ -202,7 +226,7 @@ The above copyright notice and this permission notice shall be included in all c
                         <td>11/8/2020</td>
                         <td>1 năm</td>
                         <td>0</td>
-                        <td>Đang làm việc</td>
+                        <td><a href="" class="link">Xem chi tiết</a><td>
                         <td class="td-actions text-right">
                           <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task">
                             <i class="material-icons">edit</i>
@@ -214,60 +238,207 @@ The above copyright notice and this permission notice shall be included in all c
                       </tr>
                       </tr>
                       <tr>
+                        <th>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </th>
                         <td>2</td>
                         <td>Minerva Hooper</td>
-                        <td>7h</td>
-                        <td>15h</td>
-                        <td>3h</td>
-                        <td>11h</td>
+                        <td>Bán hàng</td>
+                        <td>Chính thức</td>
+                        <td>035535631</td>
+                        <td>02/07/2020</td>
+                        <td>1 năm</td>
+                        <td>0</td>
+                        <td><a href="" class="link">Xem chi tiết</a><td>
+                          <td class="td-actions text-right">
+                            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task">
+                              <i class="material-icons">edit</i>
+                            </button>
+                            <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </td>
                       </tr>
                       <tr>
+                        <th>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </th>
                         <td>3</td>
                         <td>Sage Rodriguez</td>
-                        <td>13h</td>
-                        <td>18h</td>
+                        <td>Kỹ thuật viên</td>
+                        <td>Chính thức</td>
+                        <td>035386284</td>
+                        <td>02/07/2020</td>
+                        <td>1 năm</td>
                         <td>0</td>
-                        <td>11h</td>
+                        <td><a href="" class="link">Xem chi tiết</a><td>
+                          <td class="td-actions text-right">
+                            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task">
+                              <i class="material-icons">edit</i>
+                            </button>
+                            <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </td>
                       </tr>
                       <tr>
+                        <th>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </th>
                         <td>4</td>
                         <td>Philip Chaney</td>
-                        <td>15h</td>
-                        <td>21h</td>
+                        <td>Lắp đặt</td>
+                        <td>Chính thức</td>
+                        <td>035386284</td>
+                        <td>02/07/2020</td>
+                        <td>1 năm</td>
                         <td>0</td>
-                        <td>11h</td>
+                        <td><a href="" class="link">Xem chi tiết</a><td>
+                          <td class="td-actions text-right">
+                            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task">
+                              <i class="material-icons">edit</i>
+                            </button>
+                            <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </td>
                       </tr>
                       <tr>
+                        <th>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </th>
                         <td>5</td>
                         <td>Dakota Rice</td>
-                        <td>7h</td>
-                        <td>15h</td>
-                        <td>3h</td>
-                        <td>11h</td>
+                        <td>Bán hàng</td>
+                        <td>Chính thức</td>
+                        <td>035535631</td>
+                        <td>02/07/2020</td>
+                        <td>1 năm</td>
+                        <td>0</td>
+                        <td><a href="" class="link">Xem chi tiết</a><td>
+                          <td class="td-actions text-right">
+                            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task">
+                              <i class="material-icons">edit</i>
+                            </button>
+                            <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </td>
                       </tr>
                       <tr>
+                        <th>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </th>
                         <td>6</td>
                         <td>Minerva Hooper</td>
-                        <td>7h</td>
-                        <td>15h</td>
-                        <td>3h</td>
-                        <td>11h</td>
+                        <td>Bán hàng</td>
+                        <td>Chính thức</td>
+                        <td>035535631</td>
+                        <td>02/07/2020</td>
+                        <td>1 năm</td>
+                        <td>0</td>
+                        <td><a href="" class="link">Xem chi tiết</a><td>
+                          <td class="td-actions text-right">
+                            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task">
+                              <i class="material-icons">edit</i>
+                            </button>
+                            <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </td>
                       </tr>
                       <tr>
+                        <th>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </th>
                         <td>7</td>
                         <td>Sage Rodriguez</td>
-                        <td>13h</td>
-                        <td>18h</td>
+                        <td>Kỹ thuật viên</td>
+                        <td>Chính thức</td>
+                        <td>035386284</td>
+                        <td>02/07/2020</td>
+                        <td>1 năm</td>
                         <td>0</td>
-                        <td>11h</td>
+                        <td><a href="" class="link">Xem chi tiết</a><td>
+                          <td class="td-actions text-right">
+                            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task">
+                              <i class="material-icons">edit</i>
+                            </button>
+                            <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </td>
                       </tr>
                       <tr>
+                        <th>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </th>
                         <td>8</td>
                         <td>Philip Chaney</td>
-                        <td>15h</td>
-                        <td>21h</td>
+                        <td>Lắp đặt</td>
+                        <td>Chính thức</td>
+                        <td>035386284</td>
+                        <td>02/07/2020</td>
+                        <td>1 năm</td>
                         <td>0</td>
-                        <td>11h</td>
+                        <td><a href="" class="link">Xem chi tiết</a><td>
+                          <td class="td-actions text-right">
+                            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task">
+                              <i class="material-icons">edit</i>
+                            </button>
+                            <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </td>
                       </tr>
                     </tbody>
                   </table>
